@@ -1,2 +1,2 @@
 # WinTV-site
-test
+https://minestroymc.github.io/WinTV-site/
