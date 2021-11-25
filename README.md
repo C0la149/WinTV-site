@@ -1,2 +1,2 @@
 # WinTV-site
-http://wintv.tk/
+https://wintv.tk/
