@@ -2,7 +2,7 @@
  <head>
   <meta charset="utf-8">
   <title>WinTV</title>
-  <script src="playerjs.js" type="text/javascript"></script>
+  <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -16,9 +16,21 @@
 <p><font size="6" color="#fff" face="Arial">Мобильная версия</p></font>
 <body bgcolor="#4a4a4a">
 <div style="width:900px;height:900px">
-<div id="player"></div>
+<video id='hls-video'>
+    <source src='https://hlss.goodgame.ru/hls/170316.m3u8' type='application/x-mpegURL'/>
+</video>
+
 <script>
-   var player = new Playerjs({id:"player", file:"https://hlss.goodgame.ru/hls/170316.m3u8"});
+fluidPlayer(
+    'hls-video',
+    {
+        layoutControls: {
+            fillToContainer: true,
+			allowTheatre: false,
+			autoPlay: true
+        }
+    }
+);
 </script>
 <p></p>
 <p><font size="6" color="#fff" face="Arial">Плейлист с WinTV: http://hsdchannel.neonarod.com/tv/myplaylist.m3u</p></font>
